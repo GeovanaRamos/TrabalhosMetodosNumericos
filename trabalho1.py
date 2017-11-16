@@ -1,3 +1,6 @@
+#Geovana Ramos Sousa SIlva
+# 16/0122180
+
 import numpy as np
 from math import *
 import matplotlib.pyplot as plt
@@ -31,21 +34,19 @@ def eq(w):
 
 
 # gerando gráfico de EQ(w) para achar intervalo
-# eq_lista = []
-# for i in range(20):
-#     w = i/100
-#     eq_lista.append(eq(w))
-# w = np.arange(0.0, 0.2, 0.01)
+eq_lista = []
+for i in range(20):
+    w = i/100
+    eq_lista.append(eq(w))
+w = np.arange(0.0, 0.2, 0.01)
 # plt.plot(w,eq_lista)
 # plt.show()
 # o mínimo esta, com certeza, entre 0.10 e 0.15
 
 
 # calculando mínimo
+w1, w2 = 0.1, 0.15
 for i in range(5):
-    wtol=1e-3
-    w1, w2 = 0, 0.2
-
     wa, wb = w1 + (w2 - w1)/3, w1 + (w2 - w1) * 2 / 3
     eqa, eqb = eq(wa), eq(wb)
 
